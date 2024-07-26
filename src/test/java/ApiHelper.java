@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 public class ApiHelper {
 
     private static final RequestSpecification requestSpec = new RequestSpecBuilder()
-            .setBaseUri("http://Localhost")
+            .setBaseUri("http://localhost")
             .setPort(9999)
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.JSON)
@@ -28,7 +28,7 @@ public class ApiHelper {
                 .spec(requestSpec)
                 .body(user)
                 .when().log().all()
-                .post("/api/system/user")
+                .post("/api/system/users")
                 .then().log().all()
                 .statusCode(200);
         return user;
