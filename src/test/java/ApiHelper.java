@@ -18,10 +18,12 @@ public class ApiHelper {
             .setContentType(ContentType.JSON)
             .log(LogDetail.ALL)
             .build();
-    private ApiHelper(){
+
+    private ApiHelper() {
     }
-    static DataGenerator.RegistrationDto sendRequest(DataGenerator.RegistrationDto user){
-        Selenide.sleep(500);
+
+    static DataGenerator.RegistrationDto sendRequest(DataGenerator.RegistrationDto user) {
+       // Selenide.sleep(2000);
         given()
                 .spec(requestSpec)
                 .body(user)

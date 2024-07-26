@@ -43,6 +43,7 @@ class NewCardDebitTest {
                 .shouldHave(Condition.text("Ошибка! Неверно указан логин или пароль"), Duration.ofSeconds(10))
                 .shouldBe((Condition.visible));
     }
+
     @Test
     @DisplayName("Should get error message if login with blocked registered user")
     void shouldGetErrorIfBlockedUser() {
@@ -54,6 +55,7 @@ class NewCardDebitTest {
                 .shouldHave(Condition.text("Ошибка! Пользователь заблокирован"), Duration.ofSeconds(10))
                 .shouldBe((Condition.visible));
     }
+
     @Test
     @DisplayName("Should get error message if login with wrong login")
     void shouldGetErrorIfWrongLogin() {
