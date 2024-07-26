@@ -23,7 +23,7 @@ public class ApiHelper {
     }
 
     static DataGenerator.RegistrationDto sendRequest(DataGenerator.RegistrationDto user) {
-       // Selenide.sleep(2000);
+        Selenide.sleep(500);
         given()
                 .spec(requestSpec)
                 .body(user)
